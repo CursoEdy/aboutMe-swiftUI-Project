@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct BackgroundImage: View {
+    let image: Image
     var body: some View {
-        Image("person1")
+        image
             .resizable()
             .ignoresSafeArea()
             .scaledToFit()
@@ -19,5 +20,5 @@ struct BackgroundImage: View {
 }
 
 #Preview {
-    BackgroundImage()
+    BackgroundImage(image: Image("person3"))
 }

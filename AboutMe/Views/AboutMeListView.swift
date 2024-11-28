@@ -9,9 +9,20 @@ import SwiftUI
 
 struct AboutMeListView: View {
     var body: some View {
-        List (aboutMe) { about in
-            AbouteMeRowView(aboutMe: about)
+        NavigationSplitView {
+            
+            List (aboutMe) { about in
+                NavigationLink{
+                    AboutMeDetailView(aboutMe: about)
+                } label: {
+                    AbouteMeRowView(aboutMe: about)
+                }
+            }
+            .navigationTitle("Profissionais")
+        } detail: {
+            Text("View datails")
         }
+        .tint(.white)
     }
 }
 
