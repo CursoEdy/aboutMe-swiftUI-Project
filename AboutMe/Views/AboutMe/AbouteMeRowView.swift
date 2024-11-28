@@ -20,12 +20,17 @@ struct AbouteMeRowView: View {
             Text(aboutMe.nome)
             
             Spacer()
+            
+            if aboutMe.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundStyle(.yellow)
+            }
         }
         
     }
 }
 
 #Preview {
+    let aboutMe = ModelData().aboutMe
     AbouteMeRowView(aboutMe: aboutMe[0])
-    AbouteMeRowView(aboutMe: aboutMe[1])
 }

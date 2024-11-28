@@ -7,7 +7,10 @@
 
 import Foundation
 
-var aboutMe: [AboutMe] = load("aboutMeData.json")
+@Observable
+class ModelData {
+    var aboutMe: [AboutMe] = load("aboutMeData.json")
+}
 
 func load<T: Decodable>(_ Arquivo: String) -> T {
     let data: Data

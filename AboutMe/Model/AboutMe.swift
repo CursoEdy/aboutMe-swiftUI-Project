@@ -15,6 +15,8 @@ struct AboutMe: Hashable, Codable, Identifiable {
     var estado: String
     var descricao: String
     
+    var isFavorite: Bool
+    
     private var imagemNome: String
 
     var imagem: Image {
