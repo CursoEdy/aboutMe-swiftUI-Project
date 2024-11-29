@@ -17,6 +17,14 @@ struct AboutMe: Hashable, Codable, Identifiable {
     
     var isFavorite: Bool
     
+    var categoria: Category
+
+    enum Category: String, CaseIterable, Codable {
+        case tecnologia = "Tecnologia"
+        case saude = "Saude"
+        case imagem = "Imagem"
+    }
+    
     private var imagemNome: String
 
     var imagem: Image {
