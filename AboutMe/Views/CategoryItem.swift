@@ -13,12 +13,14 @@ struct CategoryItem: View {
     var body: some View {
         VStack {
             aboutMe.imagem
+                .renderingMode(.original)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 155, height: 155)
                 .cornerRadius(10)
             
             Text(aboutMe.nome)
+                .foregroundStyle(.primary)
                 .font(.caption)
         }
     }

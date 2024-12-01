@@ -19,12 +19,12 @@ struct AbouteMeRowView: View {
                 .frame(maxWidth: 50, maxHeight: 50)
             Text(aboutMe.nome)
             
-            Spacer()
-            
             if aboutMe.isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundStyle(.yellow)
             }
+            
+            Spacer()
         }
         
     }

@@ -16,6 +16,7 @@ struct AboutMe: Hashable, Codable, Identifiable {
     var descricao: String
     
     var isFavorite: Bool
+    var isFeatured: Bool
     
     var categoria: Category
 

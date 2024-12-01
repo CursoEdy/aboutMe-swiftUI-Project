@@ -10,7 +10,11 @@ import Foundation
 @Observable
 class ModelData {
     var aboutMe: [AboutMe] = load("aboutMeData.json")
-     
+    
+    var features: [AboutMe] {
+        aboutMe.filter { $0.isFeatured }
+    }
+    
     var categorias: [String: [AboutMe]] {
         Dictionary(
             grouping: aboutMe,
